@@ -1,0 +1,40 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/discord-plugin",
+    "description": "Funseco Discord bridge and map suggestions (REST polling)",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Discord\\": "src/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "discord",
+            "name": "Discord",
+            "description": "Discord bridge and map suggestions (REST polling)",
+            "provider": "Funseco\\Discord\\DiscordServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Discord\\Tests\\": "tests/"
+        }
+    }
+}
