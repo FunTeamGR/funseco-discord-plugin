@@ -59,7 +59,7 @@ class Relay
         $name = $m['member']['nick'] ?? $m['author']['global_name'] ?? $m['author']['username'] ?? 'discord';
 
         // double `$` so colour/format/link codes are shown literally
-        $line = '{#grey}[{#discord}Discord{#grey}] {#highlite}'.str_replace('$', '$$', $name)
+        $line = '{#grey}[{#message}Discord{#grey}] {#highlite}'.str_replace('$', '$$', $name)
             .'{#grey}: {#server}'.str_replace('$', '$$', $text);
         app(ChatService::class)->sendMessage(format_colors($line));
     }
